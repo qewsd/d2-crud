@@ -37,16 +37,21 @@ export default {
         this.formData[key] = row.hasOwnProperty(key) ? row[key] : (this.formData[key] || '')
         this.keys.push(key)
       })
+      let active = []
       if(this.formGroup){
-        for (let i=0; i< this.formGroup.length; i++) {
-          for(let j=0; j< this.formGroup[i].columns.length; j++){
-            let value =  this.formGroup[i].columns[j]
-            let index = this.keys.indexOf(value);
+        for(let group in this.formGroup.groups) {
+          active.push(group)
+          for(let index in this.formGroup.groups[group].columns){
+            let key = this.formGroup.groups[group].columns[index];
+            let index = this.keys.indexOf(key);
             if (index > -1) {
               this.keys.splice(index, 1);
             }
           }
         }
+      }
+      if(!this.formGroup.active){
+        this.formGroup.active = active
       }
     }
   }
