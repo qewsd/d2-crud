@@ -13,8 +13,6 @@ export default {
         mode: 'add'
       })
       this.isDialogShow = true
-      console.log(this.addTitle)
-      console.log(this.formMode)
       if (templage) {
         this.formData = _clonedeep(templage)
         this.addTemplateStorage = _clonedeep(templage)
