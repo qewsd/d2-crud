@@ -599,13 +599,13 @@
     </div>
     <el-dialog
       v-if="isDialogShow"
-      :title="formMode === 'edit' ? editTitle : addTitle"
       :visible.sync="isDialogShow"
       :before-close="handleDialogCancel"
       :fullscreen="fullscreen"
       v-bind="formOptions"
     >
       <template slot="title">
+        <h4>{{formMode === 'edit' ? editTitle : addTitle}}</h4>
         <button  type="button"  class="el-dialog__headerbtn" style="right:50px" @click="fullscreen = !fullscreen" ><i
           class="el-dialog__close el-icon el-icon-full-screen"/></button>
       </template>

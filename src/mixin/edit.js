@@ -37,8 +37,8 @@ export default {
         this.formData[key] = row.hasOwnProperty(key) ? row[key] : (this.formData[key] || '')
         this.keys.push(key)
       })
-      let active = []
       if(this.formGroup){
+        let active = []
         for(let group in this.formGroup.groups) {
           active.push(group)
           for(let e2index in this.formGroup.groups[group].columns){
@@ -49,9 +49,9 @@ export default {
             }
           }
         }
-      }
-      if(!this.formGroup.active){
-        this.formGroup.active = active
+        if(!this.formGroup.active){
+          this.formGroup.active = active
+        }
       }
     }
   }

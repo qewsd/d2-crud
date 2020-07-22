@@ -13,6 +13,8 @@ export default {
         mode: 'add'
       })
       this.isDialogShow = true
+      console.log(this.addTitle)
+      console.log(this.formMode)
       if (templage) {
         this.formData = _clonedeep(templage)
         this.addTemplateStorage = _clonedeep(templage)
@@ -24,8 +26,8 @@ export default {
         this.formData[key] = this.addTemplateStorage[key].value
         this.keys.push(key)
       })
-      let active = []
       if(this.formGroup){
+        let active = []
         for(let group in this.formGroup.groups) {
           active.push(group)
           for(let index in this.formGroup.groups[group].columns){
@@ -36,9 +38,9 @@ export default {
             }
           }
         }
-      }
-      if(!this.formGroup.active){
-        this.formGroup.active = active
+        if(!this.formGroup.active){
+          this.formGroup.active = active
+        }
       }
     }
   }
