@@ -39,6 +39,13 @@ export default {
       default: null
     },
     /**
+     * @description 修改表单模板
+     */
+    formGroup: {
+      type: Object,
+      default: null
+    },
+    /**
      * @description 新增表单校验规则
      */
     addRules: {
@@ -82,7 +89,11 @@ export default {
       /**
        * @description 修改表单模板暂存
        */
-      editTemplateStorage: {}
+      editTemplateStorage: {},
+      /**
+       * 剩余的key
+       */
+      keys:[]
     }
   },
   methods: {

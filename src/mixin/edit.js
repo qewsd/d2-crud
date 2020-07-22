@@ -17,6 +17,7 @@ export default {
      * @param {Object} row 行数据
      */
     handleEdit (index, row, templage = null) {
+      this.keys.splice(0,this.keys.length);
       this.formMode = 'edit'
       this.editDataStorage = _clonedeep(row)
       this.isDialogShow = true
@@ -34,7 +35,19 @@ export default {
       }
       _forEach(this.formData, (value, key) => {
         this.formData[key] = row.hasOwnProperty(key) ? row[key] : (this.formData[key] || '')
+        this.keys.push(key)
       })
+      if(this.formGroup){
+        for (let i=0; i< this.formGroup.length; i++) {
+          for(let j=0; j< this.formGroup[i].columns.length; j++){
+            let value =  this.formGroup[i].columns[j]
+            let index = this.keys.indexOf(value);
+            if (index > -1) {
+              this.keys.splice(index, 1);
+            }
+          }
+        }
+      }
     }
   }
 }
