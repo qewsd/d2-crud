@@ -1,8 +1,8 @@
 {
-  "name": "@d2-projects/d2-crud",
+  "name": "d2-crud-wang",
   "description": "A d2-projects project",
-  "version": "2.0.5",
-  "author": "孙昊翔 <673686754@qq.com>",
+  "version": "2.0.1",
+  "author": "王",
   "license": "MIT",
   "private": false,
   "main": "dist/d2-crud.js",

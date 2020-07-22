@@ -56,6 +56,10 @@ export default {
   data () {
     return {
       /**
+       * @description dialog是否最大化
+       */
+      fullscreen: false,
+      /**
        * @description dialog显示与隐藏
        */
       isDialogShow: false,
