@@ -41,11 +41,11 @@ export default {
       if(this.formGroup){
         for(let group in this.formGroup.groups) {
           active.push(group)
-          for(let index in this.formGroup.groups[group].columns){
-            let key = this.formGroup.groups[group].columns[index];
-            let index = this.keys.indexOf(key);
-            if (index > -1) {
-              this.keys.splice(index, 1);
+          for(let e2index in this.formGroup.groups[group].columns){
+            let key = this.formGroup.groups[group].columns[e2index];
+            let e3index = this.keys.indexOf(key);
+            if (e3index > -1) {
+              this.keys.splice(e3index, 1);
             }
           }
         }
