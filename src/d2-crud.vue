@@ -615,7 +615,7 @@
         :rules="handleFormRulesMode()"
         v-bind="formOptions"
       >
-        <el-collapse v-if="formGroup" v-model="formGroup.active" :accordion="formGroup.accordion"    >
+        <el-collapse v-if="formGroup" v-model="active" :accordion="formGroup.accordion"    >
           <el-collapse-item v-for="(group,groupKey) in formGroup.groups" :name="groupKey" :key="groupKey" >
             <template slot="title" >
               <h3  class="group-title" ><i v-if="group.icon" class="header-icon" :class="group.icon"/> {{group.title}}</h3>

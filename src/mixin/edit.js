@@ -50,7 +50,9 @@ export default {
           }
         }
         if(!this.formGroup.active){
-          this.formGroup.active = active
+          this.active = active
+        }else {
+          this.active = this.formGroup.active
         }
       }
     }

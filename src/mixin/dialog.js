@@ -93,7 +93,11 @@ export default {
       /**
        * 剩余的key
        */
-      keys:[]
+      keys:[],
+      /**
+       * 打开的分组
+       */
+      active:[]
     }
   },
   methods: {
