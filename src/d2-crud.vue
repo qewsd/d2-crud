@@ -784,7 +784,9 @@
           </el-collapse-item>
         </el-collapse>
 
-
+        <div v-if="formGroup">
+          <br/>
+        </div>
         <el-row v-bind="formOptions">
           <template v-for="(key, index) in keys" :key="index">
             <el-col
