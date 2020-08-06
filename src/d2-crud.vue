@@ -1,6 +1,7 @@
 <template>
   <div
     class="d2-crud"
+    :class="{'d2-crud-height100':options&&options.height==='100%'}"
     v-loading="loading"
     :element-loading-text="loadingOptions ? handleAttribute(loadingOptions.text, null) : null"
     :element-loading-spinner="loadingOptions ? handleAttribute(loadingOptions.spinner, null) : null"
@@ -1012,6 +1013,12 @@ export default {
   }
   .d2-crud-pagination {
     padding: 15px 0;
+  }
+  &.d2-crud-height100{
+    height:100%;
+    .d2-crud-body{
+      height: 100%;
+    }
   }
   .group-title{color:#67c23a}
 }

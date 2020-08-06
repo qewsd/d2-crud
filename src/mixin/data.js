@@ -28,6 +28,9 @@ export default {
   watch: {
     data () {
       this.handleDataChange()
+      this.$nextTick(() => {
+        this.$refs.elTable.doLayout();
+      })
     }
   },
   mounted () {
